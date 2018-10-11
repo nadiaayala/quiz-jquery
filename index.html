@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+    <script src="js/scripts.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="score">        
+        <h1> Your score:  </h1>
+        <p id='scoreResult'> </p>
+        <button id="restart"> Again! </button>
+    </div>    
+    <header>
+        <h1>My Quiz!</h1> 
+        <h2>So you think you can win?</h2>
+    </header>
+    <section class="questions">
+        <p>What does CSS mean?</p>
+        <ol class="alternatives">
+            <li id="correct">Cascade Style Sheets</li>
+            <li>Content Style Sheets</li>
+            <li>Content Source Sheets</li>
+        </ol>
+        <p> Inside which HTML element do we put the Javascript?</p>
+        <ol class="alternatives">
+            <li id="correct">Script</li>
+            <li>Stylesheet</li>
+            <li>Link</li>
+        </ol>
+    </section>  
+    <div class="center">
+        <button id="check"> Check!</button> 
+    </div> 
+</body>
+</html>
