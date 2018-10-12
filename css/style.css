@@ -67,3 +67,14 @@ header{
         transform: translateY(-50vw);
     }  
 }
+@media only screen and (min-width:600px){
+    #check{
+        height: 5vw;
+        width: 12%;
+        font-size: 15pt;
+        border: dotted 2px;
+    }
+    .questions{
+        font-size: 15pt;
+    }
+}
