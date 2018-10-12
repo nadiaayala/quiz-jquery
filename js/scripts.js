@@ -8,34 +8,24 @@ $(function(){
     const $btnRestart = $('#restart');
     const $modal = $('#score');
     $btnCheck.on('click', checkResults);
-    $options.on('click', chooseOption);
+    $options.on('click', function(e){
+        chooseOption(e);
+    });
     $btnRestart.on('click', restart);
-
-    function chooseOption(){
-               
-        $(this).addClass('picked');        
-        if($(this).attr('id')=='correct'){
+  
+    function chooseOption(e){
+        var target = e.target;
+        var $target = $(target);
+        $target.addClass('picked');
+        if($target.attr('id')=='correct'){
             hits++;
             console.log(hits);
         }
-    }   
-    // function chooseOption(e){
-    //     var $target = $(e.target);
-    //     if($target.attr('class')=='picked'){
-    //         $target.removeClass('picked');
-    //     }
-    //     else{
-    //     $target.addClass('picked');
-    //     }
-    //     if($target.attr('id')=='correct'){
-    //         hits++;
-    //         console.log(hits);
-    //     }
-    // }
+    }
     function checkResults(){
         $inputResults.prepend(hits);
+        $modal.removeClass('hideModal');
         $modal.addClass('showing');
-
     }
     function restart(){
         $inputResults.html('');
@@ -44,5 +34,6 @@ $(function(){
         $modal.addClass('hideModal');
         hits=0;
         chooseOption(); 
+        $btnCheck.on('click', checkResults);
     }
 })
